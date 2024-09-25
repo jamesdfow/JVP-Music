@@ -14,8 +14,23 @@
     <header>
       <img
         src="#"
-        alt="#" />
+        alt="JVP Music Logo" />
     </header>
-    <div class="search-results"></div>
+    <h1>Search Results</h1>
+    <!--where search results are displayed/-->
+    <div id="results"></div>
+    <!--navigate back to home page/-->
+    <a href="index.html">Go Back</a>
+
+    <script>
+      const searchQuery = localStorage.getItem("searchQuery");
+
+      if (searchQuery) {
+        document.getElementById(
+          "results"
+        ).innerText = `You searched for: ${searchQuery}`;
+      }
+    </script>
+    <script src="app.js"></script>
   </body>
 </html>
